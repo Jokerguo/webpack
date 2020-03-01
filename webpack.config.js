@@ -2,8 +2,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry : './src/index.js',
+    devServer: {
+        contentBase: './dist',
+    },
     output : {
         filename : '[name].[contenthash].js'
     },
